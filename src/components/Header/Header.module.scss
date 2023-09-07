@@ -1,0 +1,95 @@
+@import './../../styles/contants.scss';
+
+.wrapper {
+    position: relative;
+    z-index: 99;
+    opacity: 1;
+    transform: none;
+    position: sticky;
+    top: 0rem;
+    transition: all 300ms ease;
+
+    .container {
+        position: relative;
+        justify-content: space-between;
+        font-weight: 500;
+
+        .name {
+            img {
+                width: 55px;
+                /* Establece el ancho y alto deseado para tu logo */
+                height: 55px;
+                /* Agrega cualquier otro estilo personalizado que desees para el logo */
+            }
+        }
+
+        .menu {
+
+            @media (max-width: $sm),
+            (max-width: $md) {
+                position: absolute;
+                list-style: disc;
+                gap: 2rem;
+                font-weight: 510;
+                flex-direction: column;
+                right: 0;
+                top: 4.2rem;
+                width: 50%;
+                min-width: 15rem;
+                background: rgb(255,255,254);
+                padding: 2rem;
+                display: flex;
+                border-radius: 10px;
+                transition: all 200ms ease;
+                align-items: flex-start;
+                padding: 3rem;
+                justify-content: flex-start;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+            }
+
+            text-transform: uppercase;
+            font-size: 15px;
+            list-style: none;
+            gap: 1.3rem;
+            cursor: pointer; 
+
+            li {
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                    text-shadow: 0px 4px 4px rgba(3, 3, 3, 0.20);
+                }
+
+                &:hover {
+                    color: $secondary;
+                    transition: all 300ms ease;
+                }
+            }
+
+            .phone {
+                gap: 1.2rem;
+                flex-wrap: wrap;
+
+                svg {
+                    color: $secondary;
+                    background-color: white;
+                    padding: 10px;
+                    border-radius: 999px;
+                    box-shadow: 0px 4px 4px rgba(3, 1, 3, 0.30);
+                }
+            }
+        }
+
+
+
+        .menuIcon {
+
+            @media (max-width: $sm),
+            (max-width: $md) {
+                display: block;
+            }
+
+            display: none;
+        }
+    }
+}
